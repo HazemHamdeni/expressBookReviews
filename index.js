@@ -16,7 +16,7 @@ if (req.session && req.session) {
     const decodedToken = jwt.verify(req.session.accessToken,'HazemHAMDENI');
     next();
 }  catch (error) {
-    res.status(403).json({error:'Access Denied.'})
+    res.status(403).json({error:'Access denied.'})
 }
 } else {
     res.status(401).json ({error : 'Unauthorized.'})
